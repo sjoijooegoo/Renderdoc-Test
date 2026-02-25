@@ -1198,22 +1198,22 @@ struct AndroidController : public IDeviceProtocolHandler
       if(!installedOK)
       {
         // if there was any existing package, remove it
-        if(!packages.empty())
-        {
-          if(Android::RemoveRenderDocAndroidServer(deviceID))
-            RDCLOG("Uninstall of old server succeeded");
-          else
-            RDCERR("Uninstall of old server failed");
-        }
+        //if(!packages.empty())
+        //{
+        //  if(Android::RemoveRenderDocAndroidServer(deviceID))
+        //    RDCLOG("Uninstall of old server succeeded");
+        //  else
+        //    RDCERR("Uninstall of old server failed");
+        //}
 
-        // If server is not detected or has been removed due to incompatibility, install it
-        result = Android::InstallRenderDocServer(deviceID);
-        if(result != ResultCode::Succeeded && result != ResultCode::AndroidGrantPermissionsFailed &&
-           result != ResultCode::AndroidAPKVerifyFailed)
-        {
-          RDCERR("Failed to install RenderDoc server app");
-          return;
-        }
+        //// If server is not detected or has been removed due to incompatibility, install it
+        //result = Android::InstallRenderDocServer(deviceID);
+        //if(result != ResultCode::Succeeded && result != ResultCode::AndroidGrantPermissionsFailed &&
+        //   result != ResultCode::AndroidAPKVerifyFailed)
+        //{
+        //  RDCERR("Failed to install RenderDoc server app");
+        //  return;
+        //}
       }
 
       // stop all servers of any ABI
