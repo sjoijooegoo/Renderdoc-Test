@@ -206,7 +206,7 @@ option(ENABLE_EGL "Enable EGL" ON)
 option(ENABLE_VULKAN "Enable Vulkan driver" ON)
 option(ENABLE_METAL "Enable Metal driver" OFF)
 option(ENABLE_RENDERDOCCMD "Enable renderdoccmd" ON)
-option(ENABLE_QRENDERDOC "Enable qrenderdoc" ON)
+option(ENABLE_QRENDERDOC "Enable qrenderdoc" OFF)
 option(ENABLE_PYRENDERDOC "Enable renderdoc python modules" ON)
 
 option(ENABLE_XLIB "Enable xlib windowing support" ON)
